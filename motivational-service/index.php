@@ -1,6 +1,10 @@
 <?php
-// Punto de entrada para las solicitudes HTTP
+// Habilitar CORS para permitir solicitudes de cualquier origen
+header("Access-Control-Allow-Origin: *");  // Permite cualquier origen (puedes especificar un origen si lo prefieres)
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");  // Métodos permitidos
+header("Access-Control-Allow-Headers: Content-Type, Authorization");  // Cabeceras permitidas
 
+// Resto de tu código...
 require_once 'controllers/phraseController.php';
 
 header('Content-Type: application/json');
